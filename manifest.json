@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "destroy_nonsense_diff",
+  "description": "A chrome extension to delete gitlab's nonsense diff divs",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+
+  "background": {
+    "scripts" : ["app.js"],
+    "persistent": false
+  },
+
+  "permissions": [
+    "activeTab"
+  ]
+}
