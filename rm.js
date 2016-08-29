@@ -1,6 +1,6 @@
-var nodes = document.getElementsByClassName('diff-file file-holder'),
+var nodes = [].slice.call(document.getElementsByClassName('diff-file file-holder')),
 	rmCount = 0,
-	evilWords = ['.meta/diff', '', '.prefab/diff', '.bytes/diff'];
+	evilWords = ['.meta/diff', '.prefab/diff', '.bytes/diff'];
 
 function isNonsensePath(path) {
 	for (var i = 0; i < evilWords.length; i++) {
@@ -11,6 +11,8 @@ function isNonsensePath(path) {
 
 	return false;
 }
+
+console.log(nodes.length);
 
 for (var i = 0; i < nodes.length; i++) {
 	var node = nodes[i];
